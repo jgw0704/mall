@@ -10,6 +10,9 @@ integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zF
 crossorigin="anonymous">
 </head>
 <body>
+<div class ="container">
+		<jsp:include page="/inc/menu.jsp"></jsp:include>
+</div>
 <%
 	if(session.getAttribute("loginMemberEmail") !=null) {
 		response.sendRedirect(request.getContextPath()+"/index.jsp");
@@ -21,11 +24,11 @@ crossorigin="anonymous">
 	<form method="post" action="<%=request.getContextPath() %>/member/loginAction.jsp">
 		<table class = "table">
 			<tr>
-				<td>member_email</td>
+				<td>회원 이메일</td>
 				<td><input type = "text" name="memberEmail" value=""></td>
 			</tr>
 			<tr>
-				<td>member_pw</td>
+				<td>비밀번호</td>
 				<td><input type = "password" name="memberPw" value=""></td>
 			</tr>
 		</table>

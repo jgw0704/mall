@@ -1,19 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <!-- 최상단 검색바 -->
-	<div class="col"><h1>Goodee Shop</h1></div>
-	<div class="col">
-		<form style="text-align:center">
-			<input type="text">
-			<button class = "btn btn-dark" type="submit">검색</button>
-		</form>
-		<div class="col" style="text-align:right">
-			<i class='fas fa-user-alt' style='font-size: 26px'><a class = "text-dark" href="">회원 정보</a></i>
-			<i class='fas fa-shopping-cart' style='font-size: 26px'>
-			<a class = "text-dark" href="orders/myOrdersList.jsp?memberEmail=<%=session.getAttribute("loginMemberEmail")%>">내 주문현황</a></i>
-		</div>
+<div class="col"><h1 style="text-align:left">Goodee Shop</h1></div>
+<div class="col">
+	<form style="text-align:center">
+		<input type="text">
+		<button class = "btn btn-dark" type="submit">검색</button>
+	</form>
+	<div class="col" style="text-align:right">
+		<i class='fas fa-user-alt' style='font-size: 26px'><a class = "text-dark" href="/mall/index.jsp">홈으로</a></i>
+		<i class='fas fa-shopping-cart' style='font-size: 26px'>
+		<a class = "text-dark" href="orders/myOrdersList.jsp?memberEmail=<%=session.getAttribute("loginMemberEmail")%>">내 주문현황</a></i>
 	</div>
+</div>
 <div>
 	<!-- 로그인/회원가입 메뉴바 -->
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">

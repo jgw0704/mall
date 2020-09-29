@@ -43,7 +43,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- 추천 카테고리 이미지 링크 -->
 		<div>
 			<%
@@ -56,7 +55,6 @@
 				}
 			%>
 		</div>
-
 		<%
 			Calendar today = Calendar.getInstance(); // new Calendar()
 		%>
@@ -69,9 +67,8 @@
 			</span>
 			</h4>
 			<div>
-				<a href="" class="btn btn-primary">전체 카테고리</a>	
+				<a href="" class="btn btn-primary">전체 카테고리</a>
 				<%
-					
 					for (Category c : categoryList1) {
 				%>
 				<a href="" class="btn btn-dark"><%=c.getCategoryName()%></a>
@@ -80,7 +77,6 @@
 				%>
 			</div>
 		</div>
-
 		<%
 			ProductDao productDao = new ProductDao();
 			ArrayList<Product> productList = productDao.selectProductPicList();
@@ -116,7 +112,6 @@
 				%>
 			</tr>
 		</table>
-		
 		<!--최근 공지 2개 -->
 		<div>
 			<%
@@ -125,13 +120,13 @@
 			%>
 			<div>
 				<h4>공지사항</h4>
+				<a href="/mall/notice/noticeList.jsp">더보기</a>
 				<table class="table">
 					<thead>
-						<th>
-							<tr>notice_id</tr>
-							&nbsp;
-							<tr>notice_title</tr>
-						</th>
+						<tr>
+							<td>공지번호</td>
+							<td>제목</td>
+						</tr>
 					</thead>
 					<tbody>
 						<%
@@ -140,9 +135,7 @@
 							<tr>
 								<td><%=n.getNoticeId() %></td>
 								<td>
-									<a href="<%=request.getContextPath() %>/notice/noticeOne.jsp">
-										<%=n.getNoticeTitle() %>
-									</a>
+									<a href="/mall/notice/noticeOne.jsp?noticeTitle=<%=n.getNoticeTitle()%>"><%=n.getNoticeTitle()%></a>
 								</td>
 							</tr>
 						<%
