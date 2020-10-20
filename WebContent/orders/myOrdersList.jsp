@@ -41,7 +41,7 @@ crossorigin="anonymous">
 					for(Orders o : list) {
 				%>
 					<tr>
-						<td>ㅇ<%=o.getOrdersId()%></td>
+						<td><%=o.getOrdersId()%></td>
 						<td><%=o.getProductId()%></td>
 						<td><%=o.getOrdersAmount()%></td>
 						<td><%=o.getOrdersPrice()%></td>
